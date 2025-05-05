@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dogs – Class Activities</title>
+  <link rel="stylesheet" href="a2style.css">
+  <!-- Simple-Slider carousel library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.1/simpleslider.min.js"></script>
+  <!-- Annyang voice library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script defer src="a2app.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <h1>Dogs</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="a2homepage.html">Home</a></li>
+      <li><a href="a2stocks.html">Stocks</a></li>
+      <li><a href="a2dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Dog Images Carousel -->
+    <div id="dogCarousel" data-simple-slider class="slider-container"></div>
+
+    <!-- Breed Buttons -->
+    <div id="breedButtons" class="breed-buttons"></div>
+
+    <!-- Breed Info Panel -->
+    <div id="breedInfo" class="breed-info" style="display:none;"></div>
+  </main>
+
+  <!-- Audio Instructions Panel -->
+  <div class="audio-panel">
+    <h2>Voice Navigation</h2>
+    <ul>
+      <li>“Hello” → alert “Hello World”</li>
+      <li>“Change the color to <em>color</em>” → set background</li>
+      <li>“Navigate to <em>page</em>” → go to Home/Stocks/Dogs</li>
+      <li>“Load Dog Breed <em>breed name</em>” → show that breed’s info</li>
+    </ul>
+    <button onclick="turnOnListening()">Turn On Listening</button>
+    <button onclick="turnOffListening()">Turn Off Listening</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Jihaad Fadika </p>
+  </footer>
+</body>
+</html>

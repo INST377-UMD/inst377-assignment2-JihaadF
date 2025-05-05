@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stocks – Class Activities</title>
+  <link rel="stylesheet" href="a2style.css">
+  <!-- Voice library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="a2app.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <h1>Stocks</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="a2homepage.html">Home</a></li>
+      <li><a href="a2stocks.html">Stocks</a></li>
+      <li><a href="a2dogs.html">Dogs</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Stock Lookup Form -->
+    <section class="stocks-form">
+      <label for="ticker">Ticker:</label>
+      <input type="text" id="ticker" placeholder="AAPL">
+      <label for="range">Days:</label>
+      <select id="range">
+        <option value="30">30</option>
+        <option value="60">60</option>
+        <option value="90">90</option>
+      </select>
+      <button class="button-1" id="lookup-btn">Lookup!</button>
+    </section>
+
+    <!-- Chart.js Canvas -->
+    <section class="chart-container">
+      <canvas id="stockChart"></canvas>
+    </section>
+
+    <!-- Top 5 Reddit Stocks Table -->
+    <section class="stocks-table-container">
+      <h2>Top 5 Reddit Stocks</h2>
+      <table class="stocks-table">
+        <thead>
+          <tr>
+            <th>Ticker</th>
+            <th>Comments</th>
+            <th>Sentiment</th>
+          </tr>
+        </thead>
+        <tbody id="stocks-table-body">
+          <!-- injected by JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Audio Instructions -->
+  <div class="audio-panel">
+    <h2>Voice Navigation</h2>
+    <ul>
+      <li>“Hello” → alert “Hello World”</li>
+      <li>“Change the color to <em>color</em>” → set background color</li>
+      <li>“Navigate to <em>page</em>” → go to Home/Stocks/Dogs</li>
+      <li>“Lookup <em>ticker</em>” → lookup that ticker for 30 days</li>
+    </ul>
+    <button onclick="turnOnListening()">Turn On Listening</button>
+    <button onclick="turnOffListening()">Turn Off Listening</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Jihaad Fadika</p>
+  </footer>
+</body>
+</html>
